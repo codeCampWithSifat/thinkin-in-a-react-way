@@ -47,13 +47,19 @@ class Condition extends React.Component {
           <span className="text">{date.toLocaleTimeString(locale)}</span>
         </h1>
         {locale === "bn-BD" ? (
-          <ClockButton change={this.handleClick} locale="en-US">
-            Click here
-          </ClockButton>
+          <ClockButton
+            change={this.handleClick}
+            locale="en-US"
+            show={false}
+            enable
+          />
         ) : (
-          <ClockButton change={this.handleClick} locale="bn-BD">
-            Click here
-          </ClockButton>
+          <ClockButton
+            change={this.handleClick}
+            locale="bn-BD"
+            show={true}
+            enable
+          />
         )}
       </div>
     );
